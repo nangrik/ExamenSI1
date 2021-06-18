@@ -1,0 +1,166 @@
+﻿@model ExamenSI1.Models.Queja
+
+@{
+    ViewData["title"] = "Detalles";
+}
+
+<h2>Detalles de Banda</h2>
+
+<div class="Row">
+    <div class="co-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="QuejaId" />
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="3">
+                            <h3><center>Formato de quejas de Acoso Laboral de Farmacias el atropellado</center></h3>
+                            <h4><center> FAMGAR SAS</center></h4>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="3">
+                            <dt class="col-sm-12">
+                                @Html.DisplayNameFor(model => model.Quejafecha)
+                            </dt>
+                            <dd class="col-sm-12">
+                                @Html.DisplayFor(model => model.Quejafecha)
+                            </dd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            Formato para quejas por acoso laboral o presentar sugerencias ante el comité de convivencia laboral de la empresa coalsa LTDA
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <dt class="col-sm-12">
+                                @Html.DisplayNameFor(model => model.QuejaNombre)
+                            </dt>
+                            <dd class="col-sm-12">
+                                @Html.DisplayFor(model => model.QuejaNombre)
+                            </dd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <dt class="col-sm-12">
+                                @Html.DisplayNameFor(model => model.QuejaIdentidad)
+                            </dt>
+                            <dd class="col-sm-12">
+                                @Html.DisplayFor(model => model.QuejaIdentidad)
+                            </dd>
+
+                        </td>
+                        <td>
+                            <dt class="col-sm-12">
+                                @Html.DisplayNameFor(model => model.QuejaCc)
+                            </dt>
+                            <dd class="col-sm-12">
+                                @Html.DisplayFor(model => model.QuejaCc)
+                            </dd>
+
+                        </td>
+                        <td>
+                            <dt class="col-sm-12">
+                                @Html.DisplayNameFor(model => model.QuejaNumero)
+                            </dt>
+                            <dd class="col-sm-12">
+                                @Html.DisplayFor(model => model.QuejaNumero)
+                            </dd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <dt class="col-sm-12">
+                                @Html.DisplayNameFor(model => model.QuejaDependencia)
+                            </dt>
+                            <dd class="col-sm-12">
+                                @Html.DisplayFor(model => model.QuejaDependencia)
+                            </dd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <dt class="col-sm-12">
+                                @Html.DisplayNameFor(model => model.QuejaCargo)
+                            </dt>
+                            <dd class="col-sm-12">
+                                @Html.DisplayFor(model => model.QuejaCargo)
+                            </dd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <dt class="col-sm-12">
+                                @Html.DisplayNameFor(model => model.QuejaEmail)
+                            </dt>
+                            <dd class="col-sm-12">
+                                @Html.DisplayFor(model => model.QuejaEmail)
+                            </dd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <center>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.QuejaQueja)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.QuejaQueja)
+                                </dd>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            Si usted quiere presentar una queja, diligencie los siguientes espacios en blanco. Si a a presentar una sugerencia diligencie solo el espacio diseñado para ese proposito.
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                        <td colspan="3">
+                            <center>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.QuejaRelacion)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.QuejaRelacion)
+                                </dd>
+                            </center>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            De ser necesario el comité podrá solicitarle posteriormente la ampliacion de la informacion ofrecida.
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                        <td colspan="3">
+                            <center>
+                                <dt class="col-sm-12">
+                                    @Html.DisplayNameFor(model => model.QuejaPrueba)
+                                </dt>
+                                <dd class="col-sm-12">
+                                    @Html.DisplayFor(model => model.QuejaPrueba)
+                                </dd>
+                            </center>
+                        </td>
+                        
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="form-group">
+                <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.QuejaId">Editar</a>
+                <a asp-action="Index" class="btn btn-success">Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>

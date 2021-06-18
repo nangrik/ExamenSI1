@@ -1,0 +1,134 @@
+﻿@model ExamenSI1.Models.Queja
+
+@{
+    ViewData["title"] = "Crear una Nueva Queja";
+}
+
+
+
+<hr />
+
+<div class="Row">
+    <div class="co-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="3">
+                            <h3><center>Formato de quejas de Acoso Laboral de Farmacias el atropellado</center></h3>
+                            <h4><center> FAMGAR SAS</center></h4>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="3">
+                            <label asp-for="Quejafecha" class="control-label"></label>
+                            <input asp-for="Quejafecha" class="form-control" />
+                            <span asp-validation-for="Quejafecha" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            Formato para quejas por acoso laboral o presentar sugerencias ante el comité de convivencia laboral de la empresa coalsa LTDA
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label asp-for="QuejaNombre" class="control-label"></label>
+                            <input asp-for="QuejaNombre" class="form-control" />
+                            <span asp-validation-for="QuejaNombre" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label asp-for="QuejaIdentidad" class="control-label"></label>
+                            <input asp-for="QuejaIdentidad" class="form-control" />
+                            <span asp-validation-for="QuejaIdentidad" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <label asp-for="QuejaCc" class="control-label"></label>
+                            <input asp-for="QuejaCc" class="form-control" />
+                            <span asp-validation-for="QuejaCc" class="text-danger"></span>
+
+                        </td>
+                        <td>
+                            <label asp-for="QuejaNumero" class="control-label"></label>
+                            <input asp-for="QuejaNumero" class="form-control" />
+                            <span asp-validation-for="QuejaNumero" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label asp-for="QuejaDependencia" class="control-label"></label>
+                            <input asp-for="QuejaDependencia" class="form-control" />
+                            <span asp-validation-for="QuejaDependencia" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label asp-for="QuejaCargo" class="control-label"></label>
+                            <input asp-for="QuejaCargo" class="form-control" />
+                            <span asp-validation-for="QuejaCargo" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label asp-for="QuejaEmail" class="control-label"></label>
+                            <input asp-for="QuejaEmail" class="form-control" maxlength="12" />
+                            <span asp-validation-for="QuejaEmail" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <center>
+                                <label asp-for="QuejaQueja" class="control-label"></label>
+                                <input asp-for="QuejaQueja" class="form-control" />
+                                <span asp-validation-for="QuejaQueja" class="text-danger"></span>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            Si usted quiere presentar una queja, diligencie los siguientes espacios en blanco. Si a a presentar una sugerencia diligencie solo el espacio diseñado para ese proposito.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <center>
+                                <label asp-for="QuejaRelacion" class="control-label"></label>
+                                <input asp-for="QuejaRelacion" class="form-control" />
+                                <span asp-validation-for="QuejaRelacion" class="text-danger"></span>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            De ser necesario el comité podrá solicitarle posteriormente la ampliacion de la informacion ofrecida.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <center>
+                                <label asp-for="QuejaPrueba" class="control-label"></label>
+                                <input asp-for="QuejaPrueba" class="form-control" />
+                                <span asp-validation-for="QuejaPrueba" class="text-danger"></span>
+                            </center>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="form-group">
+                <input type="submit" value="Agregar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-warning">Revisar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

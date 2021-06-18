@@ -1,0 +1,29 @@
+﻿@model ExamenSI1.Models.Queja
+
+@{
+    ViewData["title"] = "Borrar";
+}
+
+<h2><center>Borrar Queja</center></h2>
+
+<Div>
+<h4>Borrar Queja</h4>
+
+<hr />
+<dl class="row">
+
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.QuejaIdentidad)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.QuejaIdentidad)
+    </dd>
+</dl>
+</Div>
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="QuejaId" />
+        <input type="submit" class="btn btn-danger" value="Borrar" />
+        <a asp-action="Index" class="btn btn-success">Regresar</a>
+    </form>
+</div>
