@@ -23,10 +23,7 @@ namespace ExamenSI1.Controllers
             {
                 return View(await db.Quejas.ToListAsync());
             }
-            return View(await db.Quejas.
-                Where(d => d.QuejaIdentidad.Contains(search))
-                .ToListAsync());
-
+            return View(await db.Quejas.Where(d => d.QuejaNombre.Contains(search)).ToListAsync());
         }
 
         public async Task<IActionResult> Details (int? id)
